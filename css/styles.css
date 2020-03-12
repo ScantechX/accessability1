@@ -1,3 +1,13 @@
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #3273dc;
+}
+
+a {
+  color: #1c51a6;
+}
+
 .hero-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/accessibility-hero-banner.jpg") no-repeat center center fixed;
@@ -11,15 +21,68 @@
 .tab-content {
   padding: 2rem;
 }
-.tab-pane {
-  display: none;
-}
-.tab-pane.is-active {
+.visually-hidden {
   display: block;
-  position: relative;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  width: 1px;
+  height: 1px;
 }
-.is-active {
+
+.tab-pane {
   display: initial;
+  position: relative;
+  width: auto;
+  height: auto;
+  clip: auto;
+}
+
+.accessability_cta {
+  top: 100px;
+  position: absolute;
+  display: block;
+  clip: rect(0 0 0 0);
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  width: 1px;
+  height: 1px;
+}
+.skip-navigation-list {
+  z-index: 9999;
+  position: absolute;
+  top: 130px;
+  background-color: #ffffff;
+}
+
+.accessability_cta:focus {
+  display: block;
+  width: auto;
+  height: auto;
+  clip: auto;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.tab-pane.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+.fa-external-link-alt {
+  margin-left: 5px;
+}
+
+.field.is-grouped {
+  align-items: flex-end;
+}
+
+.table-caption {
+  margin-bottom: 10px;
 }
 
 .cent {
@@ -84,14 +147,13 @@
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.13), 0 6px 6px rgba(0, 0, 0, 0.19);
 }
 
-
 .has-same-height .card {
   height: 350px;
   overflow: hidden;
 }
 
 .skills-content .media + .media {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .skills-content .progress {
@@ -103,8 +165,8 @@
 }
 
 .info-tiles {
-  margin: .75rem auto;
-  padding: 0 .75rem;
+  margin: 0.75rem auto;
+  padding: 0 0.75rem;
 }
 
 .button.is-primary.is-alt {
@@ -115,10 +177,49 @@
   line-height: 2.8;
   margin-bottom: 1rem;
 }
+.button.is-info {
+  background-color: #0a578a;
+}
+.subtitle.is-5 {
+  color: #242424;
+}
+.title.topics {
+  background-color: #0a5485;
+}
+.is-active .tab-title {
+  color: #0a578a;
+}
+.tab-item {
+  background-color: #0a5485;
+}
+.tag:not(body).is-danger {
+  background-color: #a30021;
+}
+
+.tag:not(body).is-primary {
+  background-color: #004d40;
+}
+
+.tag:not(body).is-success {
+  background-color: #0b5b27;
+}
+
+.has-text-grey-light {
+  color: #525252 !important;
+}
+
+.help.is-success {
+  color: #0b5125;
+}
+
+.help.is-danger {
+  color: #a30021;
+}
+
 .post {
   margin: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #E6EAEE;
+  border-bottom: 1px solid #e6eaee;
 }
 .post:last-child {
   padding-bottom: 0;
@@ -126,9 +227,8 @@
 }
 
 .forum-list li {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-
 
 @media screen and (max-width: 1087px) {
   .navbar-menu {
