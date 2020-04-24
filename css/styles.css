@@ -276,3 +276,54 @@ li {
   height: 40px;
   background-size: contain;
 }
+
+#alert {
+  background-color: #ffffff;
+  color: blue;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  position: fixed;
+  min-width: 150px;
+  padding: 20px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+#alert.inactive {
+  display: none;
+}
+
+.administration {
+  display: flex;
+  align-items: center;
+}
+
+.administration-trigger {
+  position: relative;
+}
+.administration_title {
+  margin-right: 6px;
+}
+
+.administration-options__list {
+  text-align: left;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 170px;
+  top: 36px;
+  left: 0;
+}
+
+.administration-options__list-item {
+  padding: 5px;
+}
+
+.administration-options__list-item:last-child {
+  border-top: 1px solid grey;
+}
+
+.administration-options__list-item.is-active {
+  background-color: grey;
+}
